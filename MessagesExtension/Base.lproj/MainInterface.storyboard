@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Messages View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="MessagesViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qkL-Od-lgU"/>
+                        <viewControllerLayoutGuide type="bottom" id="n38-gi-rB5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1e-fi-ked">
+                                <rect key="frame" x="116" y="254" width="88.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="d1e-fi-ked" secondAttribute="centerY" id="H0s-hz-dDP"/>
+                            <constraint firstAttribute="centerX" secondItem="d1e-fi-ked" secondAttribute="centerX" id="wFy-hW-Bib"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="528"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Calendars View Controller-->
+        <scene sceneID="bK0-0E-X2I">
+            <objects>
+                <collectionViewController storyboardIdentifier="CalendarsViewController" id="PH7-bD-97b" customClass="CalendarsViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="MMX-Cs-Pem">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aCx-w6-UnS">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="addCalendarCell" id="JPW-dK-OXz" customClass="AddCalendarItemCell" customModule="MessagesExtension" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="8GF-P2-6IK">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="8GF-P2-6IK" firstAttribute="top" secondItem="JPW-dK-OXz" secondAttribute="top" id="CQu-Kp-rpJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="8GF-P2-6IK" secondAttribute="trailing" id="Lbj-os-bGI"/>
+                                    <constraint firstAttribute="bottom" secondItem="8GF-P2-6IK" secondAttribute="bottom" id="czd-bB-dAm"/>
+                                    <constraint firstItem="8GF-P2-6IK" firstAttribute="leading" secondItem="JPW-dK-OXz" secondAttribute="leading" id="uga-4V-HtO"/>
+                                </constraints>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="stickerCell" id="4sn-lz-pf3" customClass="CalendarItemCell" customModule="MessagesExtension" customModuleProvider="target">
+                                <rect key="frame" x="137.5" y="10" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="PH7-bD-97b" id="dF2-9C-e0F"/>
+                            <outlet property="delegate" destination="PH7-bD-97b" id="QXC-fB-J8G"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WYK-RN-ifS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="194"/>
+        </scene>
+        <!--Create Calendar View Controller-->
+        <scene sceneID="s0Z-Tv-DcR">
+            <objects>
+                <viewController storyboardIdentifier="CreateCalendarViewController" id="4mS-mE-tOb" customClass="CreateCalendarViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="35h-Ui-m9C"/>
+                        <viewControllerLayoutGuide type="bottom" id="hot-Ae-QK3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cQ0-fR-Xug">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9k-N1-HBk">
+                                <rect key="frame" x="45.5" y="37" width="284" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="1mj-9t-a49"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="4mS-mE-tOb" id="Fdv-ae-gVu"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Id-br-iml">
+                                <rect key="frame" x="137.5" y="101" width="154" height="100"/>
+                                <state key="normal" title="Button" image="add_calendar"/>
+                                <connections>
+                                    <action selector="changeCalendarItem:" destination="4mS-mE-tOb" eventType="touchUpInside" id="Urj-ad-DU9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRn-AX-Gew">
+                                <rect key="frame" x="132" y="236" width="110" height="30"/>
+                                <state key="normal" title="Share Calendar!"/>
+                                <connections>
+                                    <action selector="shareCalendar:" destination="4mS-mE-tOb" eventType="touchUpInside" id="cbK-hT-vSR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o9k-N1-HBk" firstAttribute="centerX" secondItem="cQ0-fR-Xug" secondAttribute="centerX" id="5OE-4k-els"/>
+                            <constraint firstItem="mRn-AX-Gew" firstAttribute="centerX" secondItem="cQ0-fR-Xug" secondAttribute="centerX" id="PbR-Cd-Xa4"/>
+                            <constraint firstItem="3Id-br-iml" firstAttribute="centerX" secondItem="cQ0-fR-Xug" secondAttribute="centerX" constant="27" id="cfP-MY-meL"/>
+                            <constraint firstItem="3Id-br-iml" firstAttribute="top" secondItem="o9k-N1-HBk" secondAttribute="bottom" constant="34" id="cka-3W-hSX"/>
+                            <constraint firstItem="mRn-AX-Gew" firstAttribute="top" secondItem="3Id-br-iml" secondAttribute="bottom" constant="35" id="lV5-8A-vp9"/>
+                            <constraint firstItem="o9k-N1-HBk" firstAttribute="top" secondItem="35h-Ui-m9C" secondAttribute="bottom" constant="17" id="z5G-ie-CBR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calendarImageBtn" destination="3Id-br-iml" id="DgP-UT-HqW"/>
+                        <outlet property="captionTF" destination="o9k-N1-HBk" id="0ci-k5-9TZ"/>
+                        <outlet property="submitBtn" destination="mRn-AX-Gew" id="C4D-4x-vGQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TTa-hW-Car" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1542" y="-261"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add_calendar" width="100" height="100"/>
+    </resources>
+</document>

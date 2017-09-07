@@ -1,0 +1,12 @@
+PODS:
+  - EPCalendarPicker (1.0.9)
+
+DEPENDENCIES:
+  - EPCalendarPicker
+
+SPEC CHECKSUMS:
+  EPCalendarPicker: f6d39acc73f6df2bd78e963ed7f59b6949df2eaa
+
+PODFILE CHECKSUM: 6a8b90ed74da34a44995757ad8dc3fa9c11bb87a
+
+COCOAPODS: 1.3.1
