@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct EPDefaults  {
+public struct EPDefaults  {
     //Values
     static let startYear = 2015
     static let endYear = 2016
@@ -24,7 +24,9 @@ struct EPDefaults  {
     
     static let tintColor = EPColors.PomegranateColor
     static let barTintColor = UIColor.white
-    
+  
+    public static var passedScreenshot: UIImage = UIImage()
+  
     //HeaderSize
     static let headerSize = CGSize(width: 100,height: 60)
 }

@@ -73,6 +73,9 @@
                                     <constraint firstAttribute="bottom" secondItem="8GF-P2-6IK" secondAttribute="bottom" id="czd-bB-dAm"/>
                                     <constraint firstItem="8GF-P2-6IK" firstAttribute="leading" secondItem="JPW-dK-OXz" secondAttribute="leading" id="uga-4V-HtO"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="8GF-P2-6IK" id="RNa-m5-MCo"/>
+                                </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="stickerCell" id="4sn-lz-pf3" customClass="CalendarItemCell" customModule="MessagesExtension" customModuleProvider="target">
                                 <rect key="frame" x="137.5" y="10" width="100" height="100"/>
@@ -80,7 +83,22 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baS-rt-udh" customClass="MSStickerView">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="baS-rt-udh" secondAttribute="bottom" id="4XP-ci-Ori"/>
+                                    <constraint firstItem="baS-rt-udh" firstAttribute="top" secondItem="4sn-lz-pf3" secondAttribute="top" id="NMh-Jc-E0F"/>
+                                    <constraint firstItem="baS-rt-udh" firstAttribute="leading" secondItem="4sn-lz-pf3" secondAttribute="leading" id="ZjP-a8-1Df"/>
+                                    <constraint firstAttribute="trailing" secondItem="baS-rt-udh" secondAttribute="trailing" id="lIm-wc-kKK"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="stickerView" destination="baS-rt-udh" id="PuR-8u-HPD"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

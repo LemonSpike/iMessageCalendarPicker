@@ -42,6 +42,8 @@ open class EPCalendarPicker: UICollectionViewController {
     
     fileprivate(set) open var startYear: Int
     fileprivate(set) open var endYear: Int
+  
+    fileprivate var screenshotFrame: CGRect
     
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -139,6 +141,8 @@ open class EPCalendarPicker: UICollectionViewController {
         self.monthTitleColor = EPDefaults.monthTitleColor
         self.todayTintColor = EPDefaults.todayTintColor
 
+        self.screenshotFrame = CGRect(x: 0, y: 0, width: 0, height: 0)
+      
         //Layout creation
         let layout = UICollectionViewFlowLayout()
         //layout.sectionHeadersPinToVisibleBounds = true  // If you want make a floating header enable this property(Avaialble after iOS9)
@@ -280,13 +284,48 @@ open class EPCalendarPicker: UICollectionViewController {
 
         return UICollectionReusableView()
     }
+  
+  func screenshot(scale: CGFloat, completionHandler:@escaping (_ image: UIImage) -> ()) -> () {
+    let currentSize = screenshotFrame.size
+    let currentOffset = collectionView?.contentOffset // temp store current offset
     
+    collectionView?.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
+    
+    // it might need a delay here to allow loading data.
+    
+    let rect = screenshotFrame
+    UIGraphicsBeginImageContextWithOptions(rect.size, false, UIScreen.main.scale)
+    UIGraphicsBeginImageContextWithOptions(<#T##size: CGSize##CGSize#>, <#T##opaque: Bool##Bool#>, <#T##scale: CGFloat##CGFloat#>)
+    
+    var image = UIImage()
+    if let context = UIGraphicsGetCurrentContext() {
+      self.view.layer.render(in: context)
+      image = UIGraphicsGetImageFromCurrentImageContext()!
+    }
+      UIGraphicsEndImageContext()
+    
+    
+    collectionView?.setContentOffset(currentOffset!, animated: false)
+    
+    completionHandler((image.resizeImage(targetSize: CGSize(width: screenshotFrame.size.width*scale, height: screenshotFrame.size.height*scale))))
+  }
+  
     override open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! EPCalendarCell1
         if !multiSelectEnabled && cell.isCellSelectable! {
-            calendarDelegate?.epCalendarPicker!(self, didSelectDate: cell.currentDate as Date)
             cell.selectedForLabelColor(dateSelectionColor)
-            dismiss(animated: true, completion: nil)
+          for indexPath in collectionView.indexPathsForSelectedItems! {
+            let section = indexPath.section
+            let cellFrame = collectionView.cellForItem(at: IndexPath(item: 0, section: section))?.frame
+            let width = collectionView.frame.width
+            let height = (cellFrame?.height)!*5 + 62
+            screenshotFrame = CGRect(x: (cellFrame?.minX)!, y: (cellFrame?.minY)! - 62, width: width, height: height)
+            screenshot(scale: 0.5) { image in
+              EPDefaults.passedScreenshot = image
+              self.calendarDelegate?.epCalendarPicker!(self, didSelectDate: cell.currentDate as Date)
+//              self.dismiss(animated: true, completion: nil)
+            }
+          }
             return
         }
         

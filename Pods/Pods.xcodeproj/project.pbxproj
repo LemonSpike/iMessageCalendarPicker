@@ -21,6 +21,7 @@
 		B022458E4CFFBAAFE2D6571AA0355F9E /* EPCalendarPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C6A8244874F7C08CBB6029A9486660 /* EPCalendarPicker-dummy.m */; };
 		B693B6D35600DDC682976C82B0FA279E /* EPCalendarCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B71C315A3F09FB8B5B802F252CAACA6 /* EPCalendarCell1.swift */; };
 		BA8ABA9035CDAECE915FA4AA77107A3D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		D45A344C1F616ED300AEADF8 /* ScrollViewImager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A344B1F616ED300AEADF8 /* ScrollViewImager.swift */; };
 		DD2CE65F29C17C6A154FF9B1073B8BA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		DF0A3DEE338510428CFFF5EE7D5F38DC /* EPCalendarPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF7B4069709AD495D41A1C5EA75AE5B /* EPCalendarPicker.swift */; };
 		FBA82E797176205595A8A590BD40DE3B /* EPCalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8548CDB7268123C375A13B66511723 /* EPCalendarHeaderView.swift */; };
@@ -45,8 +46,8 @@
 
 /* Begin PBXFileReference section */
 		010E7F536449DBC93CD57574C913DBC2 /* EPCalendarPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EPCalendarPicker-umbrella.h"; sourceTree = "<group>"; };
-		0173193A6083795A17BFB50DFC8C188C /* EPCalendarPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EPCalendarPicker.framework; path = EPCalendarPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		25A8C2C9F565BB88FC42D66014133B19 /* Pods-CalendarDatePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CalendarDatePicker.modulemap"; sourceTree = "<group>"; };
+		0173193A6083795A17BFB50DFC8C188C /* EPCalendarPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EPCalendarPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25A8C2C9F565BB88FC42D66014133B19 /* Pods-CalendarDatePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CalendarDatePicker.modulemap"; sourceTree = "<group>"; };
 		2B71C315A3F09FB8B5B802F252CAACA6 /* EPCalendarCell1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EPCalendarCell1.swift; path = EPCalendar/EPCalendarPicker/EPCalendarCell1.swift; sourceTree = "<group>"; };
 		2F8548CDB7268123C375A13B66511723 /* EPCalendarHeaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EPCalendarHeaderView.swift; path = EPCalendar/EPCalendarPicker/EPCalendarHeaderView.swift; sourceTree = "<group>"; };
 		37829DA902A424E489EEF0F0BCB59829 /* EPExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EPExtensions.swift; path = EPCalendar/EPCalendarPicker/EPExtensions.swift; sourceTree = "<group>"; };
@@ -56,9 +57,9 @@
 		567B46E3E8398B171F721117F70BFF07 /* EPCalendarPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EPCalendarPicker.xcconfig; sourceTree = "<group>"; };
 		63556FDBBC4F4EBA01CDD15926B632F9 /* Pods-CalendarDatePicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CalendarDatePicker.release.xcconfig"; sourceTree = "<group>"; };
 		71C5063EE4CBF3D3B32AFEE8A8529D4E /* Pods-CalendarDatePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CalendarDatePicker-umbrella.h"; sourceTree = "<group>"; };
-		75AF3BA60DCF43D61275990314F506E7 /* Pods_MessagesExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MessagesExtension.framework; path = "Pods-MessagesExtension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		75AF3BA60DCF43D61275990314F506E7 /* Pods_MessagesExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessagesExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77129052CC5B804BB4F5E005864C92EA /* Pods-MessagesExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MessagesExtension-umbrella.h"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		942F187EF84AACD0A577F9F79D75F9AD /* EPCalendarConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EPCalendarConstants.swift; path = EPCalendar/EPCalendarPicker/EPCalendarConstants.swift; sourceTree = "<group>"; };
 		98E96F9F114A8F9AD7CA905ABB13D5B5 /* Pods-CalendarDatePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CalendarDatePicker-dummy.m"; sourceTree = "<group>"; };
 		9923786E235C2528902409DC02CE2C79 /* EPCalendarPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EPCalendarPicker-prefix.pch"; sourceTree = "<group>"; };
@@ -73,13 +74,14 @@
 		B7C91B11BF4CED98A7EF00D8A9538CA8 /* Pods-MessagesExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MessagesExtension-dummy.m"; sourceTree = "<group>"; };
 		BF0FBF4B2AE2C7B6012902A4A0F271C6 /* EPCalendarCell1.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = EPCalendarCell1.xib; path = EPCalendar/EPCalendarPicker/EPCalendarCell1.xib; sourceTree = "<group>"; };
 		C51C690925CFF7E6CA7FAB27870F4B00 /* Pods-CalendarDatePicker-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CalendarDatePicker-resources.sh"; sourceTree = "<group>"; };
-		C8088181EAEBF4EFE0C98B0D17CC7A74 /* EPCalendarPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = EPCalendarPicker.modulemap; sourceTree = "<group>"; };
+		C8088181EAEBF4EFE0C98B0D17CC7A74 /* EPCalendarPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EPCalendarPicker.modulemap; sourceTree = "<group>"; };
 		CAC1B06A7F6C4D7FCDC89C06E5CC2AEE /* Pods-MessagesExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MessagesExtension.release.xcconfig"; sourceTree = "<group>"; };
-		CEE5C0B980D5825A7DFE8EB9CDEE9F82 /* Pods-MessagesExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MessagesExtension.modulemap"; sourceTree = "<group>"; };
+		CEE5C0B980D5825A7DFE8EB9CDEE9F82 /* Pods-MessagesExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MessagesExtension.modulemap"; sourceTree = "<group>"; };
+		D45A344B1F616ED300AEADF8 /* ScrollViewImager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScrollViewImager.swift; path = EPCalendar/EPCalendarPicker/ScrollViewImager.swift; sourceTree = "<group>"; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DA3F9E447074B05F6E989674416277B7 /* Pods-CalendarDatePicker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CalendarDatePicker-acknowledgements.markdown"; sourceTree = "<group>"; };
 		ED0CE55FEF49EF7D7C82FBCD7AF955BD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE6B4408206AC9B3F57E031F8A7BAD73 /* Pods_CalendarDatePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CalendarDatePicker.framework; path = "Pods-CalendarDatePicker.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE6B4408206AC9B3F57E031F8A7BAD73 /* Pods_CalendarDatePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarDatePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C6A8244874F7C08CBB6029A9486660 /* EPCalendarPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EPCalendarPicker-dummy.m"; sourceTree = "<group>"; };
 		F93A32E54BD4AF3478853EEB0DEBF658 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,12 +210,12 @@
 				2B71C315A3F09FB8B5B802F252CAACA6 /* EPCalendarCell1.swift */,
 				942F187EF84AACD0A577F9F79D75F9AD /* EPCalendarConstants.swift */,
 				2F8548CDB7268123C375A13B66511723 /* EPCalendarHeaderView.swift */,
+				D45A344B1F616ED300AEADF8 /* ScrollViewImager.swift */,
 				3CF7B4069709AD495D41A1C5EA75AE5B /* EPCalendarPicker.swift */,
 				37829DA902A424E489EEF0F0BCB59829 /* EPExtensions.swift */,
 				706FE1D5C939FC23F0737E932951B9EE /* Resources */,
 				FFF09FF5B7FA0A800ADC6B151A50C1AD /* Support Files */,
 			);
-			name = EPCalendarPicker;
 			path = EPCalendarPicker;
 			sourceTree = "<group>";
 		};
@@ -387,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B693B6D35600DDC682976C82B0FA279E /* EPCalendarCell1.swift in Sources */,
+				D45A344C1F616ED300AEADF8 /* ScrollViewImager.swift in Sources */,
 				4ECDFACFE74E38EBDCC74DC5E641929B /* EPCalendarConstants.swift in Sources */,
 				FBA82E797176205595A8A590BD40DE3B /* EPCalendarHeaderView.swift in Sources */,
 				B022458E4CFFBAAFE2D6571AA0355F9E /* EPCalendarPicker-dummy.m in Sources */,

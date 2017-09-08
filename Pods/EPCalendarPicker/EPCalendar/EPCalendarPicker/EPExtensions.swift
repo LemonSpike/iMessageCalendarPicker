@@ -37,7 +37,7 @@ extension UICollectionView {
         if indexPath.section <= sections{
             let attributes = self.layoutAttributesForSupplementaryElement(ofKind: UICollectionElementKindSectionHeader, at: indexPath)
             let topOfHeader = CGPoint(x: 0, y: attributes!.frame.origin.y - self.contentInset.top)
-            self.setContentOffset(topOfHeader, animated:false)
+          self.setContentOffset(topOfHeader, animated:false)
         }
     }
 }

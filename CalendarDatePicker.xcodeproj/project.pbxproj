@@ -216,12 +216,12 @@
 				TargetAttributes = {
 					D4C4DBD01F613EB5003967DA = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = VG9R2N57GC;
+						DevelopmentTeam = 62V5N3JMEQ;
 						ProvisioningStyle = Automatic;
 					};
 					D4C4DBDA1F613EB6003967DA = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = VG9R2N57GC;
+						DevelopmentTeam = 62V5N3JMEQ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -487,10 +487,10 @@
 			baseConfigurationReference = 533EE24F0DB2D56A45797336 /* Pods-MessagesExtension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
-				DEVELOPMENT_TEAM = VG9R2N57GC;
+				DEVELOPMENT_TEAM = 62V5N3JMEQ;
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.theappbusiness.CalendarDatePicker.MessagesExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = pranav.kasetti.CalendarDatePicker.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -502,10 +502,10 @@
 			baseConfigurationReference = 28F3F21AF1741200CF3DFACF /* Pods-MessagesExtension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
-				DEVELOPMENT_TEAM = VG9R2N57GC;
+				DEVELOPMENT_TEAM = 62V5N3JMEQ;
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.theappbusiness.CalendarDatePicker.MessagesExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = pranav.kasetti.CalendarDatePicker.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -518,9 +518,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = VG9R2N57GC;
+				DEVELOPMENT_TEAM = 62V5N3JMEQ;
 				INFOPLIST_FILE = CalendarDatePicker/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.theappbusiness.CalendarDatePicker;
+				PRODUCT_BUNDLE_IDENTIFIER = pranav.kasetti.CalendarDatePicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -532,9 +532,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = VG9R2N57GC;
+				DEVELOPMENT_TEAM = 62V5N3JMEQ;
 				INFOPLIST_FILE = CalendarDatePicker/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.theappbusiness.CalendarDatePicker;
+				PRODUCT_BUNDLE_IDENTIFIER = pranav.kasetti.CalendarDatePicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

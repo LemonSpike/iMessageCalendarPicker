@@ -31,7 +31,7 @@ class CreateCalendarViewController: UIViewController {
   }
   
   @IBAction func changeCalendarItem(_ sender: Any) {
-    let calendarPicker = EPCalendarPicker(startYear: 2017, endYear: 2017, multiSelection: true, selectedDates: nil)
+    let calendarPicker = EPCalendarPicker(startYear: 2017, endYear: 2017, multiSelection: false, selectedDates: nil)
     calendarPicker.calendarDelegate = self
     let navigationController = UINavigationController(rootViewController: calendarPicker)
     self.present(navigationController, animated: true, completion: nil)
@@ -39,7 +39,7 @@ class CreateCalendarViewController: UIViewController {
   
   @IBAction func shareCalendar(_ sender: AnyObject) {
     self.calendarItem?.caption = self.captionTF.text
-    self.calendarItem?.image = self.calendarImageBtn.backgroundImage(for: .normal)
+    self.calendarItem?.image = self.calendarImageBtn.image(for: .normal)
     delegate?.addCalendarForItem(self.calendarItem!, layoutImg: self.createLayoutImage())
   }
   
@@ -68,10 +68,14 @@ protocol CreateCalendarViewControllerDelegate: class {
 
 extension CreateCalendarViewController: EPCalendarPickerDelegate {
   func epCalendarPicker(_: EPCalendarPicker, didCancel error : NSError) {
-   print("User cancelled selection")
+    print("User cancelled selection")
+    calendarImageBtn.setImage(EPDefaults.passedScreenshot, for: .selected)
+    calendarImageBtn.setImage(EPDefaults.passedScreenshot, for: .normal)
   }
   func epCalendarPicker(_: EPCalendarPicker, didSelectDate date : Date) {
     print("User selected date: \n\(date)")
+    print(EPDefaults.passedScreenshot)
+    calendarImageBtn.setImage(EPDefaults.passedScreenshot, for: .selected)
   }
 
   func epCalendarPicker(_: EPCalendarPicker, didSelectMultipleDate dates : [Date]) {
